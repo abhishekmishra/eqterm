@@ -1,1 +1,2 @@
-# eqterm: a terminal app to interact with market websites and brokerages
+# eqterm:
+a terminal app to interact with market websites and brokerages
