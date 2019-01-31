@@ -13,7 +13,8 @@ def quote_formatter(value):
         pct_chg=color_change(value['change_pct']))
 
 
-def format_output(obj, value):
+def format_output(obj, values):
     if obj == 'quote':
-        return quote_formatter(value)
-    return value
+        lines = [quote_formatter(value) for value in values]
+        return "\n".join(lines)
+    return values

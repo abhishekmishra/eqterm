@@ -1,6 +1,7 @@
 from prompt_toolkit import PromptSession, print_formatted_text, HTML
-from eqterm.bse import *
+from eqterm import bse
 from eqterm.formatters import format_output
+import click
 
 
 @click.group()
@@ -8,14 +9,16 @@ def cli():
     pass
 
 
-@click.command()
-def bluh():
-    click.echo('wut')
+cli.add_command(bse.bse)
 
 
-cli.add_command(bse)
-cli.add_command(bluh)
-
+# @click.command()
+# @click.option('-i', default=False)
+# @click.option('-i', default=False)
+# def top():
+#
+#
+#
 
 def main():
     session = PromptSession()
